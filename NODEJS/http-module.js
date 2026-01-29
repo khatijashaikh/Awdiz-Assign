@@ -10,8 +10,17 @@ const books =[
 //http: localhost:8000/books
 
 const server = http.createServer((req, res)=>{
-    if(req.method =="GET"){
-res.end("Hello")
+    if(req.method =="GET" && req.url == "/books"){
+        console.log("Books");
+res.end("My Books")
+    }
+    else if(req.method =="GET" && req.url == "/products"){
+        console.log("Produts");
+res.end("My Produts")
+    }
+    else{
+        console.log("No Url")
+        res.end("Not Post")
     }
 });
 
