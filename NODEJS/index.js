@@ -2,6 +2,7 @@
 import express from "express";
 import AllRoutes from "./routes/index.js";
 import morgan from "morgan";
+import mongoose from "mongoose";
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.get('/', (req, res)=>{
 });
 
 app.use("/api/v1", AllRoutes);
+
+// mongoose.connect()
 
 
 
